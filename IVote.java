@@ -49,6 +49,8 @@ public class IVote {
 			System.out.println( asked_question.get_choices().get(i) );
 		}	
 		
+		System.out.print("$$$$$$$$$  the correct answer(s) for this question was choice(s): "+asked_question.get_correct_answers()+"   $$$$$$$$$$$$$\n\n");
+		
 		System.out.println(submitted_answers.size()+" students out of 1000 students answered this question");
 		
 		double num_of_correct_submissions=0;
@@ -63,7 +65,8 @@ public class IVote {
 	    double percentage= (num_of_correct_submissions/1000.0)*100;
 		System.out.println(percentage+"percent of students submitted correct answer(s)");
 		
-	        //getting the number of submission per answer choice
+		
+		
 		for (int i=1; i<=asked_question.get_choices().size(); i++) {
 			int counter=0;
 		    for ( Map.Entry<Integer,String> e : submitted_answers.entrySet()) {
@@ -76,6 +79,7 @@ public class IVote {
 		System.out.println("------------------------------------------------------------");
 		
 	}//end of print statistics
+	
 
 
 
