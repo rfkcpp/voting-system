@@ -63,6 +63,16 @@ public class IVote {
 	    double percentage= (num_of_correct_submissions/1000.0)*100;
 		System.out.println(percentage+"percent of students submitted correct answer(s)");
 		
+	        //getting the number of submission per answer choice
+		for (int i=1; i<=asked_question.get_choices().size(); i++) {
+			int counter=0;
+		    for ( Map.Entry<Integer,String> e : submitted_answers.entrySet()) {
+		    	if (e.getValue().contains(String.valueOf(i)))
+		    		  counter++;
+		    	  }
+			System.out.println(counter+" students answered choice: "+i );
+		}
+		
 		System.out.println("------------------------------------------------------------");
 		
 	}//end of print statistics
