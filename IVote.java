@@ -66,7 +66,7 @@ public class IVote {
 		System.out.println(percentage+"percent of students submitted correct answer(s)");
 		
 		
-		
+		//getting the number of submission per answer choice
 		for (int i=1; i<=asked_question.get_choices().size(); i++) {
 			int counter=0;
 		    for ( Map.Entry<Integer,String> e : submitted_answers.entrySet()) {
